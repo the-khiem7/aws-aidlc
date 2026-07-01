@@ -1,0 +1,60 @@
+{
+  "$schema": "https://app.kilo.ai/config.json",
+  "instructions": [
+    ".kilo/rules/common/*.md",
+    ".kilo/rules/inception/*.md",
+    ".kilo/rules/construction/*.md",
+    ".kilo/rules/operations/*.md",
+    ".kilo/rules/extensions/**/*.opt-in.md"
+  ],
+  "agent": {
+    "aidlc": {
+      "description": "AI-Driven Development Life Cycle — full SDLC orchestration from inception to operations",
+      "mode": "primary",
+      "color": "#6366F1"
+    },
+    "inception": {
+      "description": "Planning & architecture: workspace detection, requirements, design, units",
+      "mode": "subagent",
+      "color": "#3B82F6"
+    },
+    "construction": {
+      "description": "Implementation: per-unit design, code generation, build & test",
+      "mode": "subagent",
+      "color": "#10B981"
+    },
+    "operations": {
+      "description": "Deployment & monitoring placeholder",
+      "mode": "subagent",
+      "color": "#F59E0B"
+    }
+  },
+  "permission": {
+    "*": "ask",
+    "read": "allow",
+    "glob": "allow",
+    "grep": "allow",
+    "bash": {
+      "*": "ask",
+      "git *": "allow",
+      "npm *": "ask",
+      "npm install": "allow",
+      "npm run *": "allow",
+      "ls *": "allow",
+      "mkdir *": "allow",
+      "cp *": "ask",
+      "cp aidlc-docs/**": "allow",
+      "mv *": "ask",
+      "mv aidlc-docs/**": "allow",
+      "rm *": "deny"
+    },
+    "edit": {
+      "aidlc-docs/**": "allow",
+      "*": "ask"
+    },
+    "write": {
+      "aidlc-docs/**": "allow",
+      "*": "ask"
+    }
+  }
+}
