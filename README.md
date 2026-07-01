@@ -1,3 +1,5 @@
+![AI-DLC](docs/img/image.png)
+
 # AI-DLC (AI-Driven Development Life Cycle)
 
 AI-DLC is a structured, adaptive software development workflow that runs inside your AI coding agent. It acts as an experienced software architect — guiding the agent from your raw idea to working, documented, tested code with a full audit trail.
